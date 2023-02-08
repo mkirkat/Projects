@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration  Form</title>
+
+    <style>
+      .regform{
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+        }
+    </style>
+
+    <style>
+      body
+      {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        /* background: linear-gradient(135deg, #e9086c80, #9b59b6); */
+      }
+      div{
+        display: block;
+        padding: 10px;
+      }
+      *{
+        box-sizing: border-box;
+      }
+      .title{
+        font-size: 40px;
+        font-weight: 500;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        position: relative;
+        padding-left: 25px
+        ;
+
+      }
+      .regform{
+        width: 100%;
+        max-width: 900px;
+        background-color: #e9086c80;
+        padding: 20px , 30px;
+        border-radius: 10px;
+      }
+      .user-detail{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .input-box{
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      input{
+        border: 1px solid rgb(51, 1, 1);
+        height: 25px;
+        /* font-size: 16px; */
+        border-radius: 7px;
+      }
+      
+      #dot-1, #dot-2, #dot-3{
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;;
+
+}
+#dot-1:checked ~ ,
+#dot-2:checked ~,
+#dot-3:checked ~ {
+background: #9b59b6;
+border-color: #d9d9d9;
+}
+ 
+      button{
+        background: rgb(163 4 4 / 38%);
+        margin-left: 10px;
+        margin-right: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .button{
+        padding-left: 30px;
+      }
+    </style>
+</head>
+<body>
+    <form class="regform">
+      <div class="title">Registration</div>
+      <div class="user-detail">
+        <div class="input-box">
+          <label class="lable">Enter Your Name:</label><br>
+          <input placeholder="First Name" type="text" required>
+          <input placeholder="Second Name" type="text" required>
+          <input placeholder="Last Name" type="text" required>
+        </div>
+      </div>
+        <div>            
+          <label class="lable">Enter Your Age:</label><br>
+          <input placeholder="Age" type="number">
+        </div>
+        <div class="gender">
+            <label class="lable">Gender:</label><br>
+            <div class="dot">
+              <input type="radio" name="gender" value="male" id="dot-1"> Male
+              <input type="radio" name="gender" value="female" id="dot-2"> Female
+              <input type="radio" name="gender" value="transgender" id="dot-3"> Transgender
+
+            </div>
+        </div>
+         </div>
+
+        <div>            
+            <label class="lable">Enter Your Email ID:</label><br>
+            <input placeholder="Email ID" required>
+        </div>
+        <div>            
+            <label class="lable">Enter Your Mobile Number:
+              <input placeholder="Mobile Number" required> 
+            </label> 
+            <label class="lable">Enter Alternet Mobile Number:
+              <input placeholder="Mobile Number">
+            
+        </div>
+        <div>            
+            <label class="lable">Enter Your Address:</label><br>
+            <textarea placeholder="Address" style="height: 97px; width: 348px;" required></textarea>
+        </div>
+        <div class="button">
+          <button type="submit" onclick="submitFunction()")>Submit</button>
+          <button type="reset">Reset</button>
+          <button type="disabled" onclick="cancelFunction()">Cancel</button>
+        </div>
+        
+            
+    </form>
+    <script>
+      function cancelFunction() {
+        confirm("Do You Want To Cancel It?");
+      }
+      function submitFunction() {
+        alert('Registration Successfully!!')
+      }
+
+    </script>
+
+</body>
+</html>
