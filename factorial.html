@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial No</title>
+</head>
+<body>
+    <!-- <div class="number" id="factorial">
+        <input type="text">
+        <button onclick="show()">Factorial</button>
+        <input  id="answer"> -->
+        <!-- </div> -->
+
+        <h3>Find Factorial:</h3>
+        Enter Number: <input id="num">
+        <button onclick="show()">Factorial</button>
+        <input id="answer">
+
+    <script>
+        function show(){
+            var i, no, fact;
+            fact=1;
+            no=Number(document.getElementById("num").value);
+            for(i=1; i<=no; i++)
+            {
+                fact= fact*i;
+            }  
+            document.getElementById("answer").value= fact;
+        }
+    </script>
+</body>
+</html>
